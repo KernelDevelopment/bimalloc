@@ -10,8 +10,10 @@ macro(setup_include_and_definitions TARGET_NAME)
 endmacro()
 
 macro(add_BIMALLOC_headers_and_sources HDRS_LIST_NAME SRCS_LIST_NAME)
-    file(GLOB IMPL_SOURCES CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/src/impl_*.c")
+    file(GLOB IMPL_SOURCES CONFIGURE_DEPENDS "${PROJECT_SOURCE_DIR}/src/bimalloc_*.c")
     list(APPEND ${SRCS_LIST_NAME} ${IMPL_SOURCES})
+    list(APPEND ${HDRS_LIST_NAME} ${PROJECT_SOURCE_DIR}/include/internal/bimalloc_message.h)
+    list(APPEND ${HDRS_LIST_NAME} ${PROJECT_SOURCE_DIR}/include/internal/bimalloc_assert.h)
     list(APPEND ${HDRS_LIST_NAME} ${PROJECT_SOURCE_DIR}/include/bimalloc.h)
 endmacro()
 
