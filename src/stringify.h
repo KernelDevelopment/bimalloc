@@ -1,0 +1,7 @@
+#ifndef BIMALLOC_STRINGIFY_H
+#define BIMALLOC_STRINGIFY_H
+
+#define _STRINGIFY(x) #x
+#define STRINGIFY(x) _STRINGIFY((x))
+
+#endif  // BIMALLOC_STRINGIFY_H
