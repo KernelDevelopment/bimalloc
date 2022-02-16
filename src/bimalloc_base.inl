@@ -1,6 +1,5 @@
 #include "alignment.h"
 #include "bimalloc.h"
-#include "bimalloc_bitmap.h"
 
 static void* bi_core_alloc(size_t size);
 
